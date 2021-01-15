@@ -1,0 +1,158 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+//font-family: 'Play', sans-serif;
+//font-family: 'Roboto', sans-serif;
+//font-family: 'Ubuntu', sans-serif;
+
+$minWidth: 320px;
+$maxWidth: 1400;
+$maxWidthContainer: 1180;
+$md1: $maxWidthContainer +12;
+$md2: 991.98;
+$md3: 767.98;
+$md4:479.98;
+
+$greenColor: #009933;
+//Оболочка
+.wrapper{
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  &._loaded{
+
+  }
+}
+
+//Основная сетка
+._container{
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: $md3+px) {
+    padding: 0 10px;
+  }
+}
+/*Page*/
+.page{
+  padding: 20px 0 0 0;
+  flex: 1 1 auto;
+  @media (min-width: $md3+px) {
+    padding: 133px 0 0 0;
+  }
+  @media (min-width: 640px) {
+    padding: 85px 0 0 0;
+  }
+  &__container{
+    @media (min-width: $md2+px) {
+      display: flex;
+    }
+  }
+  &__side{
+    z-index: 3;
+    flex: 0 0 260px;
+    @media (min-width: $md2+px) {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__menu{
+    margin: 0 0 40px 0;
+  }
+  &__content{
+    @media (min-width: $md2+px) {
+      flex: 1 1 auto;
+      padding: 0 0 0 30px;
+      min-width: 0;
+    }
+  }
+  &__search{
+    position: relative;
+    z-index: 5;
+    margin: 0 0 22px 0;
+  }
+  &__slider{
+    margin: 0 0 65px 0;
+  }
+  &__side-news{
+    margin: 0 0 75px 0;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  &__side-reviwes{
+
+  }
+}
+.rub:after{
+  content: " ₽";
+}
+
+
+
+
+
+
+//<img alt="" src="{$templateWebPath}img/main/icons/header.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
